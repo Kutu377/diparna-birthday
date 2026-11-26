@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Diparna Sarkar</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 20%, #f5efe6, #ddd2c2 60%, #c2b3a0);font-family:'Jost',sans-serif;padding:20px 12px;perspective:1200px;overflow-x:hidden}
+.card{width:100%;max-width:700px;background:linear-gradient(145deg,#fffffc,#fff8ee);border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.25);overflow:hidden;transform-style:preserve-3d;position:relative;z-index:2}
+.top{padding:32px 30px 0;display:flex;justify-content:space-between;align-items:flex-start}
+.script-wrap{line-height:1}
+.script-small{font-family:'Jost',sans-serif;font-size:13px;letter-spacing:6px;color:#333;display:block;margin:0 0 14px 6px;font-weight:600}
+.script{font-family:'Great Vibes',cursive;font-size:88px;line-height:1;color:#1a1a1a;display:block;transform:rotate(-2deg);text-shadow:2px 3px 0 #fff, 4px 6px 12px rgba(0,0,0,.18)}
+.main{display:flex;gap:20px;padding:14px 30px 28px}
+.left{flex:1;padding-top:18px}
+.left p{font-size:11px;line-height:1.7;letter-spacing:.5px;color:#555}
+.left h3{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:2px;margin:10px 0 2px}
+.left .sub{font-family:'Great Vibes',cursive;font-size:30px;color:#8a6a4a;margin:4px 0 12px}
+.left .line{width:40px;height:2px;background:linear-gradient(90deg,#c9a87a,#fff);margin:10px 0}
+.left .info{font-size:11px;letter-spacing:1.5px;line-height:2;color:#333;text-transform:uppercase;background:rgba(255,255,255,.7);padding:12px;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,.08)}
+.right{flex:1.05;position:relative}
+.slideshow{width:100%;height:370px;position:relative;overflow:hidden;border-radius:170px 170px 14px 14px;background:#f3e9d6;box-shadow:0 22px 40px rgba(0,0,0,.28), 0 0 0 6px #fff, 0 0 0 7px #d9c8a8}
+.slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.slideshow img.active{opacity:1}
+.dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.7);transition:.3s}
+.dot.active{background:#fff;width:20px;border-radius:10px}
+.bottom{padding:0 30px 28px;display:flex;justify-content:space-between;align-items:flex-end}
+.bottom .count{font-family:'Cormorant Garamond',serif;font-size:13px;color:#8a6a4a}
+.bottom .count b{font-size:21px;color:#1a1a1a;display:block}
+.sign{font-family:'Great Vibes',cursive;font-size:28px;color:#333;text-align:right;line-height:1}
+.sign small{font-family:'Jost',sans-serif;font-size:9px;letter-spacing:3px;display:block;margin-top:4px}
+.music-btn{position:fixed;bottom:18px;right:18px;z-index:99;background:#1a1a1a;color:#fff;border:none;padding:12px 18px;border-radius:50px;font-size:13px;letter-spacing:1px;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.3)}
+.music-btn.playing{background:#8a6a4a}
+@media(max-width:560px){
+  .top{padding:24px 20px 0}.script{font-size:62px}
+  .main{flex-direction:column;padding:0 20px 20px}.slideshow{height:330px}
+  .bottom{padding:0 20px 20px}
+}
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" loop preload="auto" autoplay muted playsinline>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn">🔊 Music Playing...</button>
+
+<div class="card" id="card3d">
+  <div class="top">
+    <div class="script-wrap">
+      <span class="script-small">DIPARNA IS</span>
+      <span class="script">One &amp; Only</span>
+    </div>
+    <div style="font-size:10px;letter-spacing:2px;text-align:right;line-height:1.6;color:#777">A SPECIAL<br>CELEBRATION</div>
+  </div>
+  <div class="main">
+    <div class="left">
+      <p>Please join us to celebrate</p>
+      <h3>DIPARNA SARKAR'S</h3>
+      <div class="sub">Birthday</div>
+      <div class="line"></div>
+      <div class="info">
+        Saturday, December 5th<br>7 O'Clock PM<br><br>
+        Celebration at Home<br>Alipurduar, West Bengal<br><br>
+        Hosted By<br>Subhadip Sarkar & Family
+      </div>
+    </div>
+    <div class="right">
+      <div class="slideshow" id="slideshow">
+        <img class="active" data-base="photo1" alt="Diparna 1">
+        <img data-base="photo2" alt="Diparna 2">
+        <img data-base="photo3" alt="Diparna 3">
+        <img data-base="photo4" alt="Diparna 4">
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="count">COUNTDOWN TO THE DAY<b id="cd">00 Days Left</b></div>
+    <div class="sign">our dearest<br><small>MOMENTS • 5TH DEC 2026</small></div>
+  </div>
+</div>
+
+<script>
+const d = new Date("2026-12-05T19:00:00+05:30");
+document.getElementById("cd").textContent = Math.max(0, Math.ceil((d - new Date())/86400000)) + " Days Left";
+
+// SMART PHOTO LOADER
+const exts = [".jpg",".jpeg",".png",".webp",".JPG",".PNG",".JPEG"];
+document.querySelectorAll("#slideshow img").forEach(img => {
+  let i = 0;
+  function tryNext(){
+    if(i >= exts.length){ return; }
+    img.src = img.dataset.base + exts[i];
+    i++;
+  }
+  img.onerror = tryNext;
+  tryNext();
+});
+
+const slides = document.querySelectorAll("#slideshow img");
+const dotsBox = document.getElementById("dots");
+let current = 0;
+slides.forEach((_, i) => {
+  const dot = document.createElement("div");
+  dot.className = "dot" + (i === 0 ? " active" : "");
+  dotsBox.appendChild(dot);
+});
+const dots = document.querySelectorAll(".dot");
+setInterval(()=>{
+  slides[current].classList.remove("active"); dots[current].classList.remove("active");
+  current = (current + 1) % slides.length;
+  slides[current].classList.add("active"); dots[current].classList.add("active");
+}, 3000);
+const card = document.getElementById("card3d");
+document.addEventListener("mousemove", (e)=>{
+  const x = (e.clientX / window.innerWidth - 0.5) * 10;
+  const y = (e.clientY / window.innerHeight - 0.5) * -10;
+  card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+// BIRTHDAY MUSIC - AUTOMATIC - TOMAR PERSONAL MUSIC
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+music.volume = 0.7;
+let isPlaying = false;
+function playMusic(){
+  music.muted = false;
+  music.play().then(()=>{
+    isPlaying = true;
+    musicBtn.textContent = "🔊 Music Playing...";
+    musicBtn.classList.add("playing");
+  }).catch(()=>{
+    music.muted = true;
+    music.play().catch(()=>{});
+  });
+}
+function toggleMusic(){
+  if(isPlaying){ music.pause(); isPlaying=false; musicBtn.textContent="🔇 Music Off"; musicBtn.classList.remove("playing"); }
+  else{ playMusic(); }
+}
+musicBtn.addEventListener("click", (e)=>{ e.stopPropagation(); toggleMusic(); });
+window.addEventListener("load", ()=>{ playMusic(); });
+let tryCount = 0;
+let autoTry = setInterval(()=>{
+  if(isPlaying){ clearInterval(autoTry); return; }
+  playMusic();
+  tryCount++;
+  if(tryCount > 10) clearInterval(autoTry);
+}, 1000);
+document.addEventListener("click", ()=>{ if(!isPlaying) playMusic(); });
+document.addEventListener("touchstart", ()=>{ if(!isPlaying) playMusic(); });
+document.addEventListener("mousemove", ()=>{ if(!isPlaying) playMusic(); }, {once:true});
+</script>
+</body>
+</html>
