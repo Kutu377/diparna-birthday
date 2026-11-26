@@ -3,71 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Diparna Sarkar</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Happy Birthday Diparna Sarkar 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 20%, #f5efe6, #ddd2c2 60%, #c2b3a0);font-family:'Jost',sans-serif;padding:20px 12px;perspective:1200px;overflow-x:hidden}
-.card{width:100%;max-width:700px;background:linear-gradient(145deg,#fffffc,#fff8ee);border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.25);overflow:hidden;transform-style:preserve-3d;position:relative;z-index:2}
-.top{padding:32px 30px 0;display:flex;justify-content:space-between;align-items:flex-start}
-.script-wrap{line-height:1}
-.script-small{font-family:'Jost',sans-serif;font-size:13px;letter-spacing:6px;color:#333;display:block;margin:0 0 14px 6px;font-weight:600}
-.script{font-family:'Great Vibes',cursive;font-size:88px;line-height:1;color:#1a1a1a;display:block;transform:rotate(-2deg);text-shadow:2px 3px 0 #fff, 4px 6px 12px rgba(0,0,0,.18)}
-.main{display:flex;gap:20px;padding:14px 30px 28px}
-.left{flex:1;padding-top:18px}
-.left p{font-size:11px;line-height:1.7;letter-spacing:.5px;color:#555}
-.left h3{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:2px;margin:10px 0 2px}
-.left .sub{font-family:'Great Vibes',cursive;font-size:30px;color:#8a6a4a;margin:4px 0 12px}
-.left .line{width:40px;height:2px;background:linear-gradient(90deg,#c9a87a,#fff);margin:10px 0}
-.left .info{font-size:11px;letter-spacing:1.5px;line-height:2;color:#333;text-transform:uppercase;background:rgba(255,255,255,.7);padding:12px;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,.08)}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 10%, #fff6e5, #f8e8d0 45%, #e8cfae 75%, #d4b28a);font-family:'Jost',sans-serif;padding:22px 12px;perspective:1200px;overflow-x:hidden;position:relative}
+body::before{content:'🎈 🎂 🎈 🎁 🎈 🎉 🎈';position:fixed;top:10px;left:0;right:0;text-align:center;font-size:22px;opacity:.7;z-index:0;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:100}
+.card{width:100%;max-width:740px;background:linear-gradient(145deg,#fffffc,#fff8ee);border-radius:22px;box-shadow:0 30px 70px rgba(0,0,0,.3), 0 0 0 1px #f0dfc0;overflow:hidden;transform-style:preserve-3d;position:relative;z-index:2;animation:cardIn .8s ease}
+@keyframes cardIn{from{opacity:0;transform:translateY(30px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.top{padding:28px 30px 0;display:flex;justify-content:space-between;align-items:flex-start}
+.script-small{font-size:12px;letter-spacing:7px;color:#b08a5a;display:block;margin:0 0 10px 6px;font-weight:600}
+.script{font-family:'Great Vibes',cursive;font-size:86px;line-height:1;color:#1a1a1a;display:block;transform:rotate(-2deg);text-shadow:2px 3px 0 #fff, 4px 6px 14px rgba(0,0,0,.18)}
+.script span{color:#c0392b}
+.badge{background:linear-gradient(135deg,#ff6b9d,#ff9a5a);color:#fff;padding:8px 14px;border-radius:50px;font-size:11px;letter-spacing:2px;font-weight:600;box-shadow:0 8px 18px rgba(255,107,157,.4);transform:rotate(3deg);text-align:center;line-height:1.5}
+.main{display:flex;gap:20px;padding:12px 30px 20px}
+.left{flex:1;padding-top:12px}
+.left p{font-size:11px;line-height:1.7;letter-spacing:.5px;color:#777}
+.left h3{font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:2px;margin:8px 0 2px}
+.left .sub{font-family:'Great Vibes',cursive;font-size:34px;color:#c0392b;margin:2px 0 10px}
+.left .line{width:50px;height:3px;background:linear-gradient(90deg,#ff6b9d,#ffb84d);margin:10px 0;border-radius:10px}
+.left .info{font-size:11px;letter-spacing:1.2px;line-height:2;color:#333;text-transform:uppercase;background:#fff;padding:14px;border-radius:14px;box-shadow:0 10px 22px rgba(0,0,0,.08);border:1px solid #f5e6c8}
+.wish-btn{margin-top:14px;width:100%;background:linear-gradient(135deg,#1a1a1a,#4a2c2a);color:#fff;border:none;padding:13px;border-radius:50px;font-size:13px;letter-spacing:1px;cursor:pointer;box-shadow:0 10px 20px rgba(0,0,0,.25);transition:.3s}
+.wish-btn:hover{transform:scale(1.03)}
+.wish-msg{display:none;margin-top:12px;background:#fff3f5;border:1px dashed #ff6b9d;padding:12px;border-radius:12px;font-size:12px;line-height:1.7;color:#555;text-align:center}
 .right{flex:1.05;position:relative}
-.slideshow{width:100%;height:370px;position:relative;overflow:hidden;border-radius:170px 170px 14px 14px;background:#f3e9d6;box-shadow:0 22px 40px rgba(0,0,0,.28), 0 0 0 6px #fff, 0 0 0 7px #d9c8a8}
-.slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
-.slideshow img.active{opacity:1}
+.slideshow{width:100%;height:380px;position:relative;overflow:hidden;border-radius:170px 170px 16px 16px;background:#f3e9d6;box-shadow:0 22px 40px rgba(0,0,0,.28), 0 0 0 6px #fff, 0 0 0 7px #e8cfae}
+.slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0;transition:opacity 1s ease, transform 6s ease;transform:scale(1)}
+.slideshow img.active{opacity:1;transform:scale(1.06)}
 .dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
-.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.7);transition:.3s}
-.dot.active{background:#fff;width:20px;border-radius:10px}
-.bottom{padding:0 30px 28px;display:flex;justify-content:space-between;align-items:flex-end}
-.bottom .count{font-family:'Cormorant Garamond',serif;font-size:13px;color:#8a6a4a}
-.bottom .count b{font-size:21px;color:#1a1a1a;display:block}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.8);transition:.3s;cursor:pointer}
+.dot.active{background:#fff;width:22px;border-radius:10px}
+.heart{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.9);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:3;animation:beat 1.2s infinite;cursor:pointer}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.bottom{padding:0 30px 26px;display:flex;justify-content:space-between;align-items:flex-end}
+.count{font-family:'Cormorant Garamond',serif;font-size:13px;color:#b08a5a}
+.count b{font-size:22px;color:#1a1a1a;display:block}
 .sign{font-family:'Great Vibes',cursive;font-size:28px;color:#333;text-align:right;line-height:1}
 .sign small{font-family:'Jost',sans-serif;font-size:9px;letter-spacing:3px;display:block;margin-top:4px}
-.music-btn{position:fixed;bottom:18px;right:18px;z-index:99;background:#1a1a1a;color:#fff;border:none;padding:12px 18px;border-radius:50px;font-size:13px;letter-spacing:1px;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.3)}
-.music-btn.playing{background:#8a6a4a}
+.cake-row{text-align:center;font-size:30px;margin:6px 0 0;letter-spacing:4px}
+.music-btn{position:fixed;bottom:18px;right:18px;z-index:99;background:#1a1a1a;color:#fff;border:none;padding:14px 20px;border-radius:50px;font-size:13px;letter-spacing:1px;cursor:pointer;box-shadow:0 12px 28px rgba(0,0,0,.35);transition:.3s}
+.music-btn.playing{background:linear-gradient(135deg,#ff6b9d,#ff9a5a)}
 @media(max-width:560px){
-  .top{padding:24px 20px 0}.script{font-size:62px}
-  .main{flex-direction:column;padding:0 20px 20px}.slideshow{height:330px}
-  .bottom{padding:0 20px 20px}
+.top{padding:22px 20px 0}.script{font-size:60px}
+.main{flex-direction:column;padding:0 20px 18px}.slideshow{height:340px}
+.bottom{padding:0 20px 20px}
 }
 </style>
 </head>
 <body>
-
-<audio id="bgMusic" loop preload="auto" autoplay muted playsinline>
+<canvas id="confetti"></canvas>
+<audio id="bgMusic" loop preload="auto" playsinline>
   <source src="music.mp3.mp4" type="audio/mp4">
+  <source src="music.mp3" type="audio/mpeg">
 </audio>
-
-<button class="music-btn" id="musicBtn">🔊 Music Playing...</button>
-
+<button class="music-btn" id="musicBtn">🎵 Tap for Music</button>
 <div class="card" id="card3d">
   <div class="top">
-    <div class="script-wrap">
+    <div>
       <span class="script-small">DIPARNA IS</span>
-      <span class="script">One &amp; Only</span>
+      <span class="script">One &amp; <span>Only</span> ❤️</span>
     </div>
-    <div style="font-size:10px;letter-spacing:2px;text-align:right;line-height:1.6;color:#777">A SPECIAL<br>CELEBRATION</div>
+    <div class="badge">✨ A SPECIAL<br>CELEBRATION ✨</div>
   </div>
   <div class="main">
     <div class="left">
       <p>Please join us to celebrate</p>
       <h3>DIPARNA SARKAR'S</h3>
-      <div class="sub">Birthday</div>
+      <div class="sub">Happy Birthday 🎂</div>
       <div class="line"></div>
       <div class="info">
         Saturday, December 5th<br>7 O'Clock PM<br><br>
         Celebration at Home<br>Alipurduar, West Bengal<br><br>
-        Hosted By<br>Subhadip Sarkar & Family
+        Hosted By<br>Subhadip Sarkar &amp; Family
       </div>
+      <button class="wish-btn" id="wishBtn">💌 Tap To See My Wish For You</button>
+      <div class="wish-msg" id="wishMsg">Dear Diparna,<br>Tumi amar jiboner sobcheye sundor upohar.<br>Tomar hasi ta jeno sarajibon evabei thake.<br><b>Happy Birthday My One &amp; Only! ❤️</b><br>- Subhadip</div>
     </div>
     <div class="right">
       <div class="slideshow" id="slideshow">
@@ -76,85 +88,80 @@ body{min-height:100vh;display:flex;align-items:center;justify-content:center;bac
         <img data-base="photo3" alt="Diparna 3">
         <img data-base="photo4" alt="Diparna 4">
         <div class="dots" id="dots"></div>
+        <div class="heart" id="heartBtn">❤️</div>
       </div>
     </div>
   </div>
+  <div class="cake-row">🎂 🕯️ 🎂 🕯️ 🎂</div>
   <div class="bottom">
     <div class="count">COUNTDOWN TO THE DAY<b id="cd">00 Days Left</b></div>
     <div class="sign">our dearest<br><small>MOMENTS • 5TH DEC 2026</small></div>
   </div>
 </div>
-
 <script>
 const d = new Date("2026-12-05T19:00:00+05:30");
 document.getElementById("cd").textContent = Math.max(0, Math.ceil((d - new Date())/86400000)) + " Days Left";
-
-// SMART PHOTO LOADER
 const exts = [".jpg",".jpeg",".png",".webp",".JPG",".PNG",".JPEG"];
 document.querySelectorAll("#slideshow img").forEach(img => {
   let i = 0;
-  function tryNext(){
-    if(i >= exts.length){ return; }
-    img.src = img.dataset.base + exts[i];
-    i++;
-  }
-  img.onerror = tryNext;
-  tryNext();
+  function tryNext(){ if(i >= exts.length) return; img.src = img.dataset.base + exts[i]; i++; }
+  img.onerror = tryNext; tryNext();
 });
-
 const slides = document.querySelectorAll("#slideshow img");
 const dotsBox = document.getElementById("dots");
 let current = 0;
 slides.forEach((_, i) => {
   const dot = document.createElement("div");
   dot.className = "dot" + (i === 0 ? " active" : "");
+  dot.onclick = ()=>{ showSlide(i); };
   dotsBox.appendChild(dot);
 });
 const dots = document.querySelectorAll(".dot");
-setInterval(()=>{
+function showSlide(n){
   slides[current].classList.remove("active"); dots[current].classList.remove("active");
-  current = (current + 1) % slides.length;
-  slides[current].classList.add("active"); dots[current].classList.add("active");
-}, 3000);
+  current = n; slides[current].classList.add("active"); dots[current].classList.add("active");
+}
+setInterval(()=>{ showSlide((current + 1) % slides.length); }, 3000);
 const card = document.getElementById("card3d");
 document.addEventListener("mousemove", (e)=>{
-  const x = (e.clientX / window.innerWidth - 0.5) * 10;
-  const y = (e.clientY / window.innerHeight - 0.5) * -10;
+  const x = (e.clientX / window.innerWidth - 0.5) * 8;
+  const y = (e.clientY / window.innerHeight - 0.5) * -8;
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 });
-
-// BIRTHDAY MUSIC - AUTOMATIC - TOMAR PERSONAL MUSIC
+document.getElementById("wishBtn").onclick = ()=>{
+  const m = document.getElementById("wishMsg");
+  m.style.display = m.style.display === "block" ? "none" : "block";
+  startConfetti();
+};
+document.getElementById("heartBtn").onclick = ()=>{ startConfetti(); };
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
-music.volume = 0.7;
+music.volume = 0.8;
 let isPlaying = false;
 function playMusic(){
-  music.muted = false;
-  music.play().then(()=>{
-    isPlaying = true;
-    musicBtn.textContent = "🔊 Music Playing...";
-    musicBtn.classList.add("playing");
-  }).catch(()=>{
-    music.muted = true;
-    music.play().catch(()=>{});
-  });
+  music.play().then(()=>{ isPlaying=true; musicBtn.textContent="🔊 Music Playing..."; musicBtn.classList.add("playing"); }).catch(()=>{});
 }
-function toggleMusic(){
-  if(isPlaying){ music.pause(); isPlaying=false; musicBtn.textContent="🔇 Music Off"; musicBtn.classList.remove("playing"); }
-  else{ playMusic(); }
+function toggleMusic(){ if(isPlaying){ music.pause(); isPlaying=false; musicBtn.textContent="🎵 Tap for Music"; musicBtn.classList.remove("playing"); } else { playMusic(); } }
+musicBtn.addEventListener("click", toggleMusic);
+document.addEventListener("click", ()=>{ if(!isPlaying) playMusic(); }, {once:true});
+document.addEventListener("touchstart", ()=>{ if(!isPlaying) playMusic(); }, {once:true});
+// CONFETTI
+const cCanvas = document.getElementById("confetti");
+const ctx = cCanvas.getContext("2d");
+let particles = [];
+function resize(){ cCanvas.width = innerWidth; cCanvas.height = innerHeight; } resize(); window.addEventListener("resize", resize);
+function startConfetti(){
+  const colors = ["#ff6b9d","#ffb84d","#4ecdc4","#a78bfa","#facc15","#ff4444"];
+  for(let i=0;i<120;i++){ particles.push({x:innerWidth/2, y:innerHeight/3, vx:(Math.random()-0.5)*12, vy:Math.random()*-10-2, s:Math.random()*8+4, c:colors[Math.floor(Math.random()*colors.length)], r:Math.random()*360, vr:(Math.random()-0.5)*10, life:100}); }
 }
-musicBtn.addEventListener("click", (e)=>{ e.stopPropagation(); toggleMusic(); });
-window.addEventListener("load", ()=>{ playMusic(); });
-let tryCount = 0;
-let autoTry = setInterval(()=>{
-  if(isPlaying){ clearInterval(autoTry); return; }
-  playMusic();
-  tryCount++;
-  if(tryCount > 10) clearInterval(autoTry);
-}, 1000);
-document.addEventListener("click", ()=>{ if(!isPlaying) playMusic(); });
-document.addEventListener("touchstart", ()=>{ if(!isPlaying) playMusic(); });
-document.addEventListener("mousemove", ()=>{ if(!isPlaying) playMusic(); }, {once:true});
+function drawConfetti(){
+  ctx.clearRect(0,0,cCanvas.width,cCanvas.height);
+  particles = particles.filter(p=>p.life>0);
+  particles.forEach(p=>{ p.x+=p.vx; p.y+=p.vy; p.vy+=0.3; p.r+=p.vr; p.life--; ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r*Math.PI/180); ctx.fillStyle=p.c; ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s); ctx.restore(); });
+  requestAnimationFrame(drawConfetti);
+}
+drawConfetti();
+setTimeout(startConfetti, 800);
 </script>
 </body>
 </html>
